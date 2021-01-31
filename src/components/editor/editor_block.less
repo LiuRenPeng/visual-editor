@@ -1,0 +1,19 @@
+@primary: #409EFF; // 主色调
+
+.editor-block {
+  position: absolute;
+  &:after {
+    @space: 3px;
+    position: absolute;
+    top: -@space;
+    left: -@space;
+    right: -@space;
+    bottom: -@space;
+    content: '';
+  }
+  &.editor-block-focus {
+    &:after {
+      border: dashed 1px @primary;
+    }
+  }
+}
